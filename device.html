@@ -16,30 +16,40 @@ div {
 h1 {
   text-align:center
 }
+.parent {
+display: grid;
+grid-template-columns: 1fr 4fr;
+grid-template-rows: repeat(2, 1fr) 5fr;
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.div1 { grid-area: 3 / 3 / 4 / 4; }
+.div2 { grid-area: 2 / 1 / 3 / 4; }
+.div3 { grid-area: 3 / 2 / 4 / 3; }
+.div4 { grid-area: 3 / 1 / 4 / 2; }
+.div5 { grid-area: 1 / 1 / 2 / 3; }
 </style>
 </head>
 <body>
-
 <h1>THIẾT BỊ THEO DÕI PHƯƠNG TIỆN</h1>
-<div>
+<div class="parent">
+<div class="div2"> <p><span>Tốc độ: <span id="speeddevice"></span> km/h</span><span> | Có phát hiện xe tải: <span id="foudtruck"></span> | Góc nghiên xe: <span id="angledevice"></span></span></p><span>Tọa Độ: <span id="geodevice"></span></span></div>
+<div class="div3"><p>Ảnh</p> </div>
+<div class="div4"> <span>Chọn thời gian để xem vị trí đã định vị </span><select id="choosetime"><option></option></select></div>
+<div class="div5">
 <p>Bảng danh sách định vị - cập nhật 3 giây liên tục</p>
-<div>
-<span>Chọn thời gian để xem vị trí đã định vị </span><select id="choosetime"><option></option></select><br>
 <span>Chọn chế độ xem <input type="radio" id="html" name="fav_language" value="HTML">Trực Tiếp (Ảnh) | <input type="radio" id="html" name="fav_language" value="HTML">Xem lại</span>
-<div>
-<span>Tốc độ: <span id="speeddevice"></span> km/h</span><span> | Tọa Độ: <span id="geodevice"></span> | Có phát hiện xe tải: <span id="foudtruck"></span> | Góc nghiên xe: <span id="angledevice"></span></span></div>
-<div><p>Ảnh</p></div>
 </div>
-<p>Thông tin thiết bị</p>
+</div>
+
 <div>
+<p>Thông tin thiết bị</p>
 <p>ID: <span id="iddevice"></span></p>
 <p>Ngày tham gia: <span id="daycreated"></span></p>
 <p>Email: <span id="emaildevice"></span></p>
 <p>SĐT: <span id="sdtdevice"></span></p>
 </div>
-</div>
+
 </body>
 </html>
-
-
-
